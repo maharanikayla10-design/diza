@@ -1,0 +1,329 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #c9d2df;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #60798d;
+    color: white;
+    padding: 20px 90px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-teks {
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.6em;
+}
+
+header p {
+    margin: 2px 0 0;
+    opacity: 0.85;
+    font-size: 0.9em;
+}
+
+#toggle-tema {
+    background-color: white;
+    color: #6492f6;
+    position: absolute;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0;
+}
+
+#toggle-tema:hover {
+    background-color: #98a9cc;
+}
+
+#status {
+    width: 90%;
+    max-width: 1100px;
+    margin: 10px auto 0;
+    font-size: 0.85em;
+    color: #979faf;
+}
+
+main {
+    width: 90%;
+    max-width: 1100px;
+    margin: 20px auto;
+}
+
+#app {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+    align-items: start;
+}
+
+.kolom {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+section {
+    background-color: rgb(234, 227, 227);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    margin-top: 0;
+    color: #1a3d96;
+}
+
+section .deskripsi {
+    margin-top: -8px;
+    margin-bottom: 12px;
+    font-size: 0.85em;
+    color: #6b7280;
+}
+
+
+input,
+textarea,
+select {
+    width: 100%;
+    padding: 8px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1px solid #d1d5db;
+    border-radius: 5px;
+    font-family: inherit;
+}
+
+button {
+    background-color: #5483ea;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    margin: 5px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #494c55;
+}
+
+.baris-filter {
+    display: flex;
+    gap: 8px;
+    margin: 8px 0;
+}
+
+.baris-filter button {
+    flex: 1;
+    margin: 0;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li.tugas-item {
+    background-color: #eef2ff;
+    margin: 8px 0;
+    padding: 10px 14px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: grab;
+}
+
+li.tugas-item.selesai {
+    opacity: 0.65;
+}
+
+li.tugas-item span {
+    cursor: pointer;
+    user-select: none;
+}
+
+li.tugas-item span.coret {
+    text-decoration: line-through;
+    color: #6b7280;
+}
+
+.aksi-tugas {
+    display: flex;
+    gap: 6px;
+}
+
+.catatan-item {
+    background-color: #f5f4f3;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.catatan-item small {
+    color: #eceae6;
+}
+
+
+#kutipan-harian {
+    background-color: #f8fafc;
+    padding: 12px;
+    border-radius: 5px;
+    font-style: italic;
+    line-height: 1.4;
+}
+
+
+.cuaca-kartu {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background-color: #f8fafc;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 10px 0;
+}
+
+.cuaca-ikon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #5071de;
+    flex-shrink: 0;
+}
+
+.cuaca-suhu {
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+.cuaca-deskripsi {
+    color: #6b7280;
+    text-transform: capitalize;
+}
+
+.cuaca-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    margin: 10px 0;
+}
+
+.cuaca-stats div {
+    background-color: #f8fafc;
+    border-radius: 5px;
+    padding: 8px;
+    font-size: 0.85em;
+    text-align: center;
+}
+
+.cuaca-waktu {
+    font-size: 0.8em;
+    color: #9ca3af;
+    margin-top: 8px;
+}
+
+
+li.tugas-item.drag-over {
+    outline: 2px dashed #4579e8;
+}
+
+
+body.dark-mode {
+    background-color: #111827;
+    color: #f9fafb;
+}
+
+body.dark-mode header {
+    background-color: #1e293b;
+}
+
+body.dark-mode #toggle-tema {
+    background-color: #f9fafb;
+    color: #1e293b;
+}
+
+body.dark-mode #status {
+    color: #9ca3af;
+}
+
+body.dark-mode section {
+    background-color: #1f2937;
+    color: #f9fafb;
+}
+
+body.dark-mode section h2 {
+    color: #60a5fa;
+}
+
+body.dark-mode section .deskripsi {
+    color: #9ca3af;
+}
+
+body.dark-mode input,
+body.dark-mode textarea,
+body.dark-mode select {
+    background-color: #374151;
+    color: white;
+    border: 1px solid #6b7280;
+}
+
+body.dark-mode input::placeholder,
+body.dark-mode textarea::placeholder {
+    color: #d1d5db;
+}
+
+body.dark-mode li.tugas-item {
+    background-color: #374151;
+    color: white;
+}
+
+body.dark-mode li.tugas-item span.coret {
+    color: #9ca3af;
+}
+
+body.dark-mode .catatan-item {
+    background-color: #4b5563;
+    color: white;
+}
+
+body.dark-mode #kutipan-harian,
+body.dark-mode .cuaca-kartu,
+body.dark-mode .cuaca-stats div {
+    background-color: #374151;
+    color: white;
+}
+
+body.dark-mode .cuaca-deskripsi,
+body.dark-mode .cuaca-waktu {
+    color: #d1d5db;
+}
+
+body.dark-mode footer {
+    background-color: #1e293b;
+}
+
+
+@media (max-width: 800px) {
+    #app {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+footer {
+    background-color: #2082c0;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
